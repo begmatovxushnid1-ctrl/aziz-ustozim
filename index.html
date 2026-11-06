@@ -64,19 +64,20 @@
     }
 
     /* Avatar Qismi */
-    .avatar-wrapper {
+        .avatar-wrapper {
       position: relative;
-      margin-bottom: 12px;
-      margin-top: 6px;
+      margin-bottom: 16px;
+      margin-top: 10px;
+      display: inline-block;
     }
 
     .avatar-ring {
-      width: 105px;
-      height: 105px;
+      width: 125px;
+      height: 125px;
       border-radius: 50%;
-      padding: 3px;
+      padding: 3.5px;
       background: linear-gradient(135deg, #f43f5e, #6366f1, #38bdf8);
-      box-shadow: 0 0 25px rgba(244, 63, 94, 0.35);
+      box-shadow: 0 0 35px rgba(244, 63, 94, 0.5);
     }
 
     .avatar-img {
@@ -84,26 +85,29 @@
       height: 100%;
       border-radius: 50%;
       object-fit: cover;
-      object-position: top;
-      border: 3px solid #0f172a;
+      object-position: 28% 12%;
+      border: 3.5px solid #0f172a;
       display: block;
     }
 
     .badge-topik {
       position: absolute;
-      bottom: 0;
-      right: 2px;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
       background: linear-gradient(135deg, #e11d48, #be123c);
       color: #fff;
       font-size: 11px;
       font-weight: 800;
-      padding: 3px 8px;
-      border-radius: 12px;
+      padding: 3px 12px;
+      border-radius: 20px;
       border: 2px solid #0f172a;
       display: flex;
       align-items: center;
       gap: 4px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+      white-space: nowrap;
+      z-index: 10;
     }
 
     /* Ustoz haqida */
