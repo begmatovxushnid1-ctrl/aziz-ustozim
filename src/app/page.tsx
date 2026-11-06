@@ -68,16 +68,31 @@ export default function Home() {
   )}`;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950 text-slate-100 flex flex-col items-center justify-start p-3 sm:p-6 pb-20">
-      
+    <main className="min-h-screen relative text-slate-100 flex flex-col items-center justify-start p-3 sm:p-6 pb-20 overflow-x-hidden">
+      {/* Koreys atmosferasini beruvchi orqa fon (Lokal rasm: Seul Saroyi) */}
+      <div 
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat pointer-events-none scale-105"
+        style={{
+          backgroundImage: `url('/korea-bg.jpg')`,
+        }}
+      />
+      {/* Qoraytirilgan va atmosferali zamonaviy gradient overlay */}
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-slate-950/90 via-slate-950/85 to-indigo-950/95 backdrop-blur-[2px] pointer-events-none" />
+
+      {/* Kontent qismi */}
+      <div className="relative z-10 w-full max-w-md mx-auto">
       {/* Profil / Header Qismi (Instagram Bio formati uchun maxsus) */}
-      <div className="w-full max-w-md mx-auto pt-4 flex flex-col items-center text-center">
+      <div className="w-full flex flex-col items-center text-center pt-2">
         
         {/* Flag & Avatar */}
         <div className="relative mb-3">
           <div className="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-rose-500 via-indigo-500 to-blue-400 shadow-xl shadow-rose-500/20">
-            <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden border-2 border-slate-800">
-              <span className="text-4xl">🇰🇷</span>
+            <div className="w-full h-full rounded-full bg-slate-900 overflow-hidden border-2 border-slate-800 relative">
+              <img
+                src="/teacher.jpg"
+                alt="Aziz Ustoz - Yonsei University"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           </div>
           <span className="absolute bottom-0 right-1 bg-rose-600 text-[11px] font-bold px-2 py-0.5 rounded-full border border-slate-900 text-white flex items-center gap-1 shadow">
@@ -381,6 +396,7 @@ export default function Home() {
           </div>
         </div>
 
+      </div>
       </div>
     </main>
   );

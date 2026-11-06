@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Koreys Tili Darslari | Aziz Ustoz (한국어)",
@@ -19,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uz">
-      <body className="bg-slate-950 text-slate-100 antialiased selection:bg-rose-500 selection:text-white">
+      <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+      </head>
+      <body className="bg-slate-950 text-slate-100 antialiased selection:bg-rose-500 selection:text-white min-h-screen">
         {children}
       </body>
     </html>
